@@ -1,0 +1,39 @@
+:root {
+    --primary-color             : #FF6C00;
+    --secondary-color           : #191C26;
+    --primary-bg-color          : #FFFFFF;
+    
+    --text-primary              : #303030;
+    --text-secondary            : #9DA4BD;
+
+}
+
+body {
+    background-color: var(--primary-bg-color);
+
+    font-family: 'Open Sans', sans-serif
+    
+}
+
+.link {
+    text-decoration: none;
+}
+
+.list {
+    list-style: none;
+
+}
+
+h2.section-tittle {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1,17;
+    letter-spacing: 0.05em;
+
+    color: var(--text-primary);
+}
+
+h2.section-tittle.secondary {
+
+}
