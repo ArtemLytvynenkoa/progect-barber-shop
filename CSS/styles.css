@@ -1,7 +1,7 @@
 :root {
     --primary-color             : #FF6C00;
     --secondary-color           : #191C26;
-    --primary-white-color          : #FFFFFF;
+    --primary-white-color       : #FFFFFF;
     
     --text-primary              : #303030;
     --text-secondary            : #9DA4BD;
@@ -16,20 +16,56 @@ body {
     font-family: 'Open Sans', sans-serif; 
 }
 
+h1,h2,h3,h4,h5,h6,p {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+}
+
 .link {
     text-decoration: none;
 }
 
 .list {
     list-style: none;
-
 }
+
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Header styles */
 
 .header {
     background-color: rgb(138, 124, 1);
 }
 
+/* Nav styles */
+
+.navbar,
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    margin-left: 40px;
+}
+
+.nav-links .item-link:not(:last-child) {
+    margin-right: 40px;
+}
+
 .nav-link {
+    padding-top: 52px;
+
     font-weight: 600;
     font-size: 12px;
     line-height: 1.33;
@@ -43,6 +79,57 @@ body {
     color: var(--primary-color);
 }
 
+.auth-links {
+    margin-left: auto;
+}
+
+.phone-link {
+    margin-right: 40px;
+}
+
+.phone-link,
+.primary-btn {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+
+    color: var(--primary-white-color);
+}
+
+.primary-btn {
+    padding: 12px 20px;
+    border: 1px solid transparent;
+}
+
+.primary-btn:focus,
+.primary-btn:hover {
+    border: 1px solid var(--primary-color);
+    border-radius: 25px;
+}
+
+/* Sidebar styles */
+
+.sidebar .social-link {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.2em;
+    color: inherit;
+}
+
+.sidebar .social-link:not(:last-child) {
+    padding-right: 40px;
+}
+
+.sidebar .social-link:focus,
+.sidebar .social-link:hover {
+    color: var(--primary-color);
+}
+
+/* Slider styles */
+
 h2.section-tittle {
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
@@ -54,5 +141,15 @@ h2.section-tittle {
 }
 
 h2.section-tittle.secondary {
+    color: var(--primary-white-color);
+}
+
+.hero-text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+
+    color: var(--text-secondary);
 
 }
