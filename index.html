@@ -12,8 +12,18 @@
 <body>
 
     <header class="header">
-        <!-- Navbar -->
+        
         <div class="container">
+
+            <!-- Sidebar -->
+
+            <aside class="sidebar">
+                <div class="social-box">
+                    <a href="#" class="social-link link">Instagram</a>
+                    <a href="#" class="social-link link">Youtube</a>
+                </div>
+            </aside>
+            <!-- Navbar -->
             <nav class="navbar">
                 <img src="./images/name-of-company.png" alt="Имя компании" width="69" height="55" class="logo-img">
                 <ul class="nav-links list">
@@ -28,14 +38,7 @@
                 </div>
             </nav>
 
-            <!-- Sidebar -->
 
-            <aside class="sidebar">
-                <div class="social-box">
-                    <a href="#" class="social-link link">Instagram</a>
-                    <a href="#" class="social-link link">Youtube</a>
-                </div>
-            </aside>
 
             <!-- Slider -->
 
@@ -64,15 +67,15 @@
 
         <!-- About our section -->
 
-        <section class="section-box" id="about-section">
-            <div class="container">
+        <section class="section-box section" id="about-section">
+            <div class="container about-container">
                 <div class="about-img">
-                    <img src="./images/shaving.jpg" alt="Бритьё" width="270" height="445">
-                    <img src="./images/canting.jpg" alt="Подкантовка" width="270" height="445">
+                    <img class="img-about" src="./images/shaving.jpg" alt="Бритьё" width="270" height="445">
+                    <img class="img-about" src="./images/canting.jpg" alt="Подкантовка" width="270" height="445">
                 </div>
                 <div class="discription-container">
                     <span class="suptitle-primary">О НАС</span>
-                    <h2 class="section-tittle">Лучший Барбершоп твоего города</h2>
+                    <h2 class="section-title">Лучший Барбершоп твоего города</h2>
                     <h3 class="section-subtitle">Если ты хочешь добавить в свой образ больше уверенности – тебе точно к нам.</h3>
                     <p class="section-text">Мы команда, которая никогда не останавливается на достигнутом и жаждет перемен. И когда ты попадешь в руки нашего мастера, то уже никогда не сможешь быть прежним. Мы команда, которая всегда с клиентами "на одной волне". Поэтому, мы всегда готовы усовершенствовать каждого, кто к нам приходит!
                     </p>
@@ -83,13 +86,13 @@
 
         <!-- Services and price section -->
 
-        <section class="section-box" id="price-section">
+        <section class="section-price section" id="price-section">
             <div class="container">
                 <span class="suptitle-secondary">Проведи время в компании лучших мастеров</span>
-                <h2 class="section-tittle secondary">Услуги и цены</h2>
+                <h2 class="section-title secondary">Услуги и цены</h2>
 
                 <div class="price-box">
-                <ul class="plice-list list">
+                <ul class="price-list list">
                     <li class="price-item">
                         <p>Мужская стрижка</p>
                         <span>от 300 грн.</span>
@@ -108,7 +111,7 @@
                     </li>
                 </ul>
                 
-                <ul class="plice-list list">
+                <ul class="price-list list">
                     <li class="price-item">
                         <p>Cтрижка у стажера</p>
                         <span>от 50 грн.</span>
@@ -128,37 +131,37 @@
                 </ul>
                 </div>
 
-                <a href="#footer" class="piamary-btn link">онлайн-запись</a>
+                <a href="#footer" class="primary-btn link">онлайн-запись</a>
 
             </div>
         </section>
 
         <!-- Why We section -->
 
-        <section class="section-box">
-            <div class="container">
+        <section class="section-wws section">
+            <div class="container container-wws">
                 <div class="number-container">
                     <div class="number-box">
-                        <p>600</p>
-                        <span>Довольных клиентов в день</span>
+                        <p class="numeric">600</p>
+                        <span class="number-text">Довольных клиентов в день</span>
                     </div>
                     <div class="number-box">
-                        <p>50</p>
-                        <span>Наград за отличный сервис </span>
+                        <p class="numeric">50</p>
+                        <span class="number-text">Наград за отличный сервис </span>
                     </div>
                     <div class="number-box">
-                        <p>20</p>
-                        <span>Лучших мастеров Киева </span>
+                        <p class="numeric">20</p>
+                        <span class="number-text">Лучших мастеров Киева </span>
                     </div>
                     <div class="number-box">
-                        <p>100</p>
-                        <span>Подарков постоянным клиентам</span>
+                        <p class="numeric">100</p>
+                        <span class="number-text">Подарков постоянным клиентам</span>
                     </div>
                 </div>
 
                 <div class="discription-container">
                     <span class="suptitle-primary">старая традиционная школа</span>
-                    <h2 class="section-tittle">Почему приходят именно к нам?</h2>
+                    <h2 class="section-title">Почему приходят именно к нам?</h2>
                     <h3 class="section-subtitle">О нас говорят только хорошее. Но лучше 1 раз увидеть и прочувствовать, чем 10 раз прочитать. </h3>
                 </div>
             </div>
@@ -166,27 +169,27 @@
 
         <!-- Our masters section -->
 
-        <section class="section-box" id="our-masters">
+        <section class="section-master section" id="our-masters">
             <div class="container">
                 <span class="suptitle-primary">для настоящих ценителей атмосферы</span>
-                <h2 class="section-tittle">Наши мастера</h2>
-                <ul class="masters list">
+                <h2 class="section-title">Наши мастера</h2>
+                <ul class="masters-list list">
                     <li class="master-card">
                         <img src="./images/master-1.jpg" alt="Мастер John Smith" width="370" height="346">
-                        <p>John Smith</p>
-                        <span>Extreme Barber</span>
+                        <p class="master-name">John Smith</p>
+                        <span class="profession">Extreme Barber</span>
                         <div class="master-social-box"><a href="" class="master-social-link"></a><a href="" class="master-social-link"></a><a href="" class="master-social-link"></a><a href="" class="master-social-link"></a></div>
                     </li>
                     <li class="master-card">
                         <img src="./images/master-2.jpg" alt="Мастер Michele Doe" width="370" height="346">
-                        <p>Michele Doe</p>
-                        <span>Extreme Barber</span>
+                        <p class="master-name">Michele Doe</p>
+                        <span class="profession">Extreme Barber</span>
                         <div class="master-social-box"><a href="" class="master-social-link"></a><a href="" class="master-social-link"></a><a href="" class="master-social-link"></a><a href="" class="master-social-link"></a></div>
                     </li>
                     <li class="master-card">
                         <img src="./images/master-3.jpg" alt="Мастер Alan Black" width="370" height="346">
-                        <p>Alan Black</p>
-                        <span>Extreme Barber</span>
+                        <p class="master-name">Alan Black</p>
+                        <span class="profession">Extreme Barber</span>
                         <div class="master-social-box"><a href="" class="master-social-link"></a><a href="" class="master-social-link"></a><a href="" class="master-social-link"></a><a href="" class="master-social-link"></a></div>
                     </li>
                 </ul>
@@ -196,7 +199,7 @@
 
         <!-- Portfolio section -->
 
-        <section class="section-box">
+        <section class="section-portfolio section">
             <div class="container">
                 <span class="suptitle-primary">На латинском языке “барба” означает “борода”</span>
                 <div class="img-gallery">
@@ -212,31 +215,32 @@
 
     <!-- Footer -->
 
-    <footer class="footer" id="footer">
+    <footer class="footer section" id="footer">
         <div class="container">
-            <div>
-                <h2 class="section-tittle secondary">Онлайн-запись</h2>
+            <div class="container-form">
+                <h2 class="section-title secondary">Онлайн-запись</h2>
                 <form action="">
                     <input type="submit" class="primary-btn">
                 </form>
             </div>
-            <div>
-                <h2 class="section-tittle secondary">Контакты</h2>
+            <div class="container-contacts">
+                <h2 class="section-title secondary">Контакты</h2>
                 <div class="contacts-box">
-                    <adress>ул. Васильковая, 7А Киев, 08132</adress>
-                    <a href="tel:+380441111111" class="link">+38 044 111 11 11</a>
-                    <a href="mailto:barbershop@email.com">barbershop@email.com</a>
+                    <adress class="contacts">ул. Васильковая, 7А Киев, 08132</adress>
+                    <a href="tel:+380441111111" class="link contacts">+38 044 111 11 11</a>
+                    <a href="mailto:barbershop@email.com" class="contacts">barbershop@email.com</a>
                 </div>
                 <div class="schedule-box">
                     <span class="suptitle-secondary">время работы</span>
-                    <p>Ежедневно с 9:00 до 22:00</p>
+                    <p class="work-time">Ежедневно с 9:00 до 22:00</p>
                 </div>
             </div>
         </div>
     </footer>
-    <div class="container">
-        <div class="copyright">
-            <p class="cope-text">&#169; Copyright <span>2020</span></p>
+    
+    <div class="copyright">
+        <div class="container">
+            <p class="copy-text">&#169; Copyright <span>2020</span></p>
             <div class="social-box">
                 <a href="#" class="social-link link">Instagram</a>
                 <a href="#" class="social-link link">Youtube</a>

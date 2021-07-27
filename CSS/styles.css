@@ -2,14 +2,23 @@
     --primary-color             : #FF6C00;
     --secondary-color           : #191C26;
     --primary-white-color       : #FFFFFF;
-    
+    --secondary-bg              : #F7F7F7;
     --text-primary              : #303030;
-    --text-secondary            : #9DA4BD;
+    --color-text-secondary      : #9DA4BD;
     --paragraph-primary         : #555555;
+    --suptitle-secondary-color  : rgba(157, 164, 189, 0.6);
+}
 
+html {
+    box-sizing: border-box;
+ }
+ *, *::before, *::after {
+    box-sizing: inherit;
 }
 
 body {
+    margin: 0;
+
     background-color: var(--primary-white-color);
     color: var(--text-primary);
 
@@ -31,6 +40,8 @@ img {
 
 .list {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -41,10 +52,36 @@ img {
     margin-right: auto;
 }
 
+.section {
+    width: 100%;
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
+
+.section:not(.footer .section) {
+    padding-left: 55px;
+    padding-right: 55px;
+}
+
+h2.section-title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.17;
+    letter-spacing: 0.05em;
+}
+
+h2.section-title.secondary {
+    color: var(--primary-white-color);
+}
+
 /* Header styles */
 
-.header {
-    background-color: rgb(138, 124, 1);
+.header .container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 /* Nav styles */
@@ -55,8 +92,22 @@ img {
     align-items: center;
 }
 
+.container .navbar {
+    padding-top: 32px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-right: 55px;
+    padding-left:  55px;
+}
+
+.logo-img {
+    width: 69px;
+    height: 55px;
+}
+
 .nav-links {
-    margin-left: 40px;
+    margin-left: 71px;
 }
 
 .nav-links .item-link:not(:last-child) {
@@ -100,16 +151,23 @@ img {
 
 .primary-btn {
     padding: 12px 20px;
-    border: 1px solid transparent;
-}
-
-.primary-btn:focus,
-.primary-btn:hover {
     border: 1px solid var(--primary-color);
     border-radius: 25px;
 }
 
+.primary-btn:focus,
+.primary-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--primary-white-color);
+}
+
 /* Sidebar styles */
+
+.sidebar {
+    width: 155px;
+    height: 100vh;
+    background-color: var(--primary-white-color);
+}
 
 .sidebar .social-link {
     font-weight: 600;
@@ -130,26 +188,314 @@ img {
 
 /* Slider styles */
 
-h2.section-tittle {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-    font-size: 42px;
-    line-height: 1.17;
-    letter-spacing: 0.05em;
-
-    color: var(--text-primary);
+.slider {
+    background-image: url('../images/bg-img/Slider-img-3.jpg'); 
+    width: calc(100% - 155px);
 }
 
-h2.section-tittle.secondary {
+.suptitle-secondary {
+    display: block;
+    margin-bottom: 20px;
+
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: var(--suptitle-secondary-color);
+
+}
+
+.hero-title {
+    margin-bottom: 20px;
+
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 1.18;
+    letter-spacing: 0.05em;
+
     color: var(--primary-white-color);
 }
 
 .hero-text {
     font-weight: 400;
     font-size: 18px;
-    line-height: 30px;
+    line-height: 1.67;
     letter-spacing: 0.02em;
 
-    color: var(--text-secondary);
+    color: var(--color-text-secondary);
 
+}
+
+/* About our section styles */
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+} 
+
+
+.about-img {
+    display: flex;
+    max-width: 48%;
+    margin-right: 64px;
+}
+
+.img-about {
+    max-width: 270px;
+}
+.img-about:not(:last-child) {
+    margin-right: 30px;
+}
+
+.discription-container {
+    max-width: 48%;
+    padding-right: 45px;
+}
+
+.suptitle-primary {
+    display: block;
+    margin-bottom: 20px;
+
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.discription-container .section-title {
+    margin-bottom: 20px;
+}
+
+.section-subtitle {
+    margin-bottom: 20px;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+
+    color: var(--paragraph-primary);
+}
+
+.section-text {
+    margin-bottom: 40px;
+    padding-right: 20px;
+
+    font-size: 14px;
+    line-height: 1.86;
+    letter-spacing: 0.02em;
+
+    color: var(--paragraph-primary);
+}
+
+.primary-btn.darken {
+    color: var(--text-primary);
+}
+
+.primary-btn.darken:hover,
+.primary-btn.darken:hover {
+    color: var(--primary-white-color);
+}
+
+/* Services and price section styles */
+
+.section-price {
+    background-color: steelblue; 
+}
+
+.section-price .section-title {
+    margin-bottom: 44px;
+}
+
+.price-box,
+.price-item {
+    display: flex;
+}
+
+.price-box {
+    margin-bottom: 50px;
+}
+
+.price-list {
+    padding: 30px 40px;
+    width: 585px;
+}
+
+.price-item:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.price-item {
+    justify-content: space-between;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+
+    color: var(--color-text-secondary);
+}
+   
+.section-price .primary-btn {
+    min-width: 160px;
+    display: inline-block;
+    margin-left: 505px; 
+}
+
+/* Why we section styles */
+
+.container-wws {
+    display: flex;
+    justify-content: space-between;
+}
+
+.number-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 48%;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.number-box {
+    min-width: 170px;
+    width: 48%;
+    height: 133px;
+    margin-top: 30px;
+
+    background-color: var(--secondary-bg);
+    text-align: center;
+}
+
+.numeric {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.36;
+    letter-spacing: 0.05em;
+}
+
+.number-text {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;   
+}
+
+/* Our master section styles */
+
+.section-master {
+    background-color: var(--secondary-bg);
+}
+
+.section-master .section-title {
+    margin-bottom: 44px;
+}
+
+.masters-list {
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.master-card:not(:last-child) {
+    margin-right: 30px;
+}
+
+.master-name {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.39;
+    letter-spacing: 0.02em;
+}
+
+.profession {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.36;
+    letter-spacing: 0.02em;
+
+    color: var(--primary-color);
+}
+
+/* Portfolio section styles */
+
+/* Footer styles */
+
+.footer {
+    background-color: slategray;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-form .section-title {
+    margin-bottom: 44px;
+}
+
+.container-contacts .section-title {
+    margin-bottom: 40px;
+}
+
+.contacts-box {
+    margin-bottom: 70px;
+}
+
+.contacts,
+.work-time {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+
+    color: var(--color-text-secondary);
+}
+
+.schedule-box .suptitle-secondary {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: var(--primary-white-color);
+}
+
+/* Under footer container styles */
+
+.copyright {
+    background-color: var(--secondary-bg);
+}
+
+.copy-text {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: 0.2em;
+
+    color: #9DA4BD;
+}
+
+.copyright .social-link {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.2em;
+    color: var(--text-primary);
+}
+
+.copyright .social-link:not(:last-child) {
+    margin-right: 40px;
+}
+
+.copyright .container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 56px;
+    padding-bottom: 56px;
 }
