@@ -7,6 +7,8 @@
     --color-text-secondary      : #9DA4BD;
     --paragraph-primary         : #555555;
     --suptitle-secondary-color  : rgba(157, 164, 189, 0.6);
+    --bg-service-section        : #111319;
+
 }
 
 html {
@@ -104,6 +106,7 @@ h2.section-title.secondary {
 .logo-img {
     width: 69px;
     height: 55px;
+    fill: #303030;
 }
 
 .nav-links {
@@ -189,9 +192,16 @@ h2.section-title.secondary {
 /* Slider styles */
 
 .slider {
-    background-image: url('../images/bg-img/Slider-img-3.jpg'); 
+    background-image: 
+    linear-gradient(287deg, #00000059, #000000cf),
+    url('../images/bg-img/Slider-img-3.jpg'); 
     width: calc(100% - 155px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 272px 525px 206px 100px;
 }
+
 
 .suptitle-secondary {
     display: block;
@@ -220,6 +230,8 @@ h2.section-title.secondary {
 }
 
 .hero-text {
+    display: inline-block;
+    padding-right: 250px;
     font-weight: 400;
     font-size: 18px;
     line-height: 1.67;
@@ -265,6 +277,20 @@ h2.section-title.secondary {
     letter-spacing: 0.1em;
     text-transform: uppercase;
 }
+.suptitle-primary::before,
+.suptitle-secondary::before {
+    content: "";
+    display: inline-block;
+    width: 60px;
+    height: 1px;
+    margin-right: 20px;
+    background: var(--text-primary);
+    vertical-align: middle;
+}
+
+.suptitle-secondary::before {
+    background: var(--suptitle-secondary-color);
+}
 
 .discription-container .section-title {
     margin-bottom: 20px;
@@ -304,7 +330,16 @@ h2.section-title.secondary {
 /* Services and price section styles */
 
 .section-price {
-    background-color: steelblue; 
+    background-color: var(--bg-service-section);
+    background-image: 
+        linear-gradient(
+            to right,
+            rgba(17, 19, 25, 0.6),
+            rgba(17, 19, 25, 0.6)),
+        url(../images/bg-img/bg-service-section.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .section-price .section-title {
@@ -346,6 +381,31 @@ h2.section-title.secondary {
     margin-left: 505px; 
 }
 
+.price-list.first {
+    background: 
+    linear-gradient(
+        180deg, #171A24 0%, 
+        rgba(23, 26, 36, 0.2) 100%);
+}
+
+.price-list.second {
+    background: 
+    linear-gradient(
+        180deg, #090B13 0%, 
+        rgba(9, 11, 19, 0.2) 100%);
+}
+
+.price-item p::after {
+    content: "";
+    display: inline-block;
+    background-color: #9DA4BD1F;
+    width: auto;
+    height: 1px;
+    margin-left: 6px;
+    margin-left: 6px;
+
+}
+
 /* Why we section styles */
 
 .container-wws {
@@ -363,13 +423,20 @@ h2.section-title.secondary {
 }
 
 .number-box {
+    display: block;
     min-width: 170px;
     width: 48%;
     height: 133px;
+    padding: 20px 24px;
     margin-top: 30px;
+    
 
-    background-color: var(--secondary-bg);
     text-align: center;
+    background-color: var(--secondary-bg);
+}
+
+.number-box:nth-child(2n+1) {
+    margin: 0;
 }
 
 .numeric {
@@ -405,6 +472,11 @@ h2.section-title.secondary {
     margin-right: 30px;
 }
 
+.text-master {
+    margin-top: 30px;
+    text-align: center;
+}
+
 .master-name {
     font-weight: 400;
     font-size: 18px;
@@ -413,37 +485,101 @@ h2.section-title.secondary {
 }
 
 .profession {
+    display: inline-block;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.36;
     letter-spacing: 0.02em;
+    margin-top: 8px;
 
     color: var(--primary-color);
 }
 
-/* Portfolio section styles */
-
-/* Footer styles */
-
-.footer {
-    background-color: slategray;
+.master-social-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
 }
 
-.footer .container {
+.master-social-link {
+    width: 44px;
+    height: 44px;
+    background-color: var(--primary-white-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-primary);
+}
+
+.master-social-link:not(:last-child) {
+    margin-right: 10px;
+}
+
+.master-social-link:hover,
+.master-social-link:focus {
+    color: var(--primary-color);
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+/* Portfolio section styles */
+
+.img-gallery {
     display: flex;
     justify-content: space-between;
 }
 
+/* Footer styles */
+
+.footer {
+    background-color: #191C26;
+    background-image: 
+    linear-gradient(360deg, #191c26e6, #191c26e6),
+    url(../images/bg-img/bg-footer.jpg);
+    background-repeat: no-repeat;
+    background-size: calc(50%);
+    background-position: right;
+    background-attachment: fixed;
+}
+
+.footer .container {
+    justify-content: space-between;
+    display: flex;
+}
+
 .container-form .section-title {
     margin-bottom: 44px;
+    min-width: 50%;
+}
+
+.footer .primary-btn {
+    background-color: var(--primary-color);
+    width: 160px;
 }
 
 .container-contacts .section-title {
     margin-bottom: 40px;
 }
 
+.container-contacts {
+    min-width: 50%;
+    padding: 0 155px 0 100px;
+}
+
 .contacts-box {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 70px;
+}
+
+.footer .contacts:not(:last-child) {
+    margin-bottom: 20px;
 }
 
 .contacts,
