@@ -299,8 +299,20 @@
         <div class="container">
             <div class="container-form">
                 <h2 class="section-title secondary">Онлайн-запись</h2>
-                <form action="">
-                    <input type="submit" class="primary-btn">
+                <form class="footer-form">
+                    <label for="userName" class="field-label">
+                        <input type="text" name="userName" id="userName" class="form-field" required>
+                         <legend>ИМЯ*</legend>
+                    </label>
+                    <label for="userPhone" class="field-label">
+                        <input type="tel" name="userPhone" class="form-field" id="userPhone" required>
+                        <legend>ТЕЛЕФОН*</legend>
+                    </label>
+                    <label for="userMessage" class="field-label">
+                        <textarea name="userMessage" id="userMessage" cols="80" rows="5" class="form-field"></textarea>
+                        <legend>сообщение</legend>
+                    </label>
+                    <button type="submit" class="primary-btn">Отправить</button>
                 </form>
             </div>
             <div class="container-contacts">

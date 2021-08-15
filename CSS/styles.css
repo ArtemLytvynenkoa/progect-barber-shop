@@ -593,14 +593,87 @@ h2.section-title.secondary {
     display: flex;
 }
 
+.footer-form {
+    width: 560px;
+}
+
 .container-form .section-title {
     margin-bottom: 44px;
     min-width: 50%;
 }
 
+.footer-form .form-field {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+    
+    outline: none;
+    color: var(--primary-white-color);
+    cursor: pointer;
+}
+
+.footer-form .field-label {
+    position: relative;
+    display: inline-block;
+
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    color: rgba(157, 164, 189, 0.4);
+}
+
+.field-label:hover .form-field,
+.footer-form .form-field:focus,
+.field-label:hover {
+    border-color: var(--primary-white-color);
+    color: var(--primary-white-color);
+}
+
+.form-field:checked legend {
+
+}
+
+.footer-form .field-label legend {
+    position: absolute;
+    top: -3px;
+
+    transition: transform 250ms linear;
+}
+
+.footer-form .form-field:focus + legend {
+    transform: translate(-2px, -24px);
+    color: var(--primary-white-color);
+}
+
+.field-label:first-child {
+    margin-right: 30px;
+    margin-bottom: 44px;
+}
+
+.field-label:first-child .form-field {
+    width: 260px;
+}
+
+.field-label:nth-child(2) .form-field {
+    width: 250px;
+}
+
+
+textarea.form-field {
+    resize: none;
+    width: 545px;
+}
+
 .footer .primary-btn {
-    background-color: var(--primary-color);
+    background-color: transparent;
     width: 160px;
+    cursor: pointer;
+
+    margin-top: 44px;
 }
 
 .container-contacts .section-title {
